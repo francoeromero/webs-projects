@@ -1,0 +1,965 @@
+@import url('https://fonts.googleapis.com/css?family-Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(126, 126, 126, 0.5);
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    min-height: 60px;
+    z-index: 1000000;
+   
+}
+
+
+header a:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+ul li a{
+    
+    z-index: 0;
+    
+}
+
+
+
+.logo{
+    height: 50px;
+    margin-left: 10px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+nav a {
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 60px;
+    color: black;
+}
+
+
+/*EMAIL*/
+
+.title {
+    text-align: center;
+    margin-top: 150px;
+    color: #fff;
+}
+
+.input-email{
+    width: 100%;
+    height: 30px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: rgb(221, 221, 221);
+    margin-top: 30px;
+}
+
+.input-email:focus{
+    outline: 1px solid black;
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.input-submit{
+    width: 10%;
+    background-color: orange;
+    border: 1px solid orange;
+    height: 30px;
+    font-weight: 900;
+    min-width: 120px;
+    margin-bottom: 70px;
+    border-radius: 30px;
+}
+
+.input-submit:hover{
+    scale: 1.1;
+    transition: 0.5s;
+    box-shadow: 1px 4px 10px 2px black;
+}
+
+
+
+
+
+/*TEXTOS*/
+#features{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.features{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(173, 173, 173);
+}
+
+.img:hover{
+    scale: 1.1;
+    transition: 0.5s;
+    
+}
+
+
+
+/*videos*/
+.title-work{
+    text-align: center;
+    color: white;
+}
+.videos{
+    display: flex;
+    flex-direction: row;
+}
+.video-work{
+    margin: 10px;
+}
+iframe{
+    border-radius: 20px;
+    width: 510px;
+}
+iframe:hover{
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+
+
+
+
+/*contenedor de todas las cajas*/
+#content{
+    display: flex;
+    flex-direction: column;
+}
+/*contenedor de 3 cards*/
+.container
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+}
+
+/**/
+/*contenedor gris*/
+.container .card-a{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+/*dentro del contenedor gris, creamos un circulo*/
+.container .card-a:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+/* en hover le cambiamos el circulo*/
+.container .card-a:hover:before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+
+
+
+/*texto de fondo grande del contenido gris*/
+.container .card-a:after
+{
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.04);
+}
+/*escalamos la imagen del botin*/
+img{
+    scale: 0.8;
+}
+/*seleccionamos el contenedor del botin imgBx*/
+.container .card-a .imgBx-a
+{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+/*El hover para que cuando se selecciona se mueva*/
+.container .card-a:hover .imgBx-a{
+    top: -10%;
+    transform: translate(0%);
+}
+/*seleccionamos especificamente el botin osea la img*/
+.container .card-a .imgBx-a img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    width: 270px;
+}
+/*Titulo Nike shoes, contenedor del texto*/
+.container .card-a .contentBx-a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+/*hover del contenedor del titulo para que suba */
+.container .card-a:hover .contentBx-a{
+    height: 210px;
+}
+/*seleccionamos el texto del titulo especificamente*/
+.container .card-a .contentBx-a h2 {
+    position: relative;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+
+/*hacemos desparecer a size y color*/
+.container .card-a .contentBx-a .size-a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card-a .contentBx-a .color-a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+/*hover de size y color para que aparescas al tocar*/
+.container .card-a:hover .contentBx-a .size-a{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+
+.container .card-a:hover .contentBx-a .color-a{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card-a:hover .contentBx-a .color-a h3{
+    color: #fff;
+}
+
+/*texto de size*/
+
+.container .card-a .contentBx-a .size-a h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+/*los cuadrados que contiene un numero de calzado*/
+.container .card-a .contentBx-a .size-a span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*hover de los cuadrados*/
+.container .card-a .contentBx-a .size-a span:hover{
+    background: #9bdc28;
+
+}
+.container .card-a .contentBx-a .color-a span
+{
+    width: 25px;
+    height: 25px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-a .contentBx-a .color-a span:hover{
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+}
+
+.container .card-a .contentBx-a .color-a span:nth-child(2)
+{
+    background: #9bdc28;
+}
+
+.container .card-a .contentBx-a .color-a span:nth-child(3)
+{
+    background: #03a9f4;
+}
+
+.container .card-a .contentBx-a .color-a span:nth-child(4)
+{
+    background: #e91e63;
+}
+
+.container .card-a .contentBx-a a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container .card-a:hover .contentBx-a a{
+
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+}
+
+.container .card-a .contentBx-a a:hover{
+    scale: 1.2;
+    transition: 0.5s;
+    box-shadow: 0px 3px 10px 3px rgb(0, 0, 0);
+}
+
+
+
+
+
+
+/*B*/
+
+
+
+
+
+
+/*contenedor gris*/
+.container .card-b{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+/*dentro del contenedor gris, creamos un circulo*/
+.container .card-b:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2849dc;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+/* en hover le cambiamos el circulo*/
+.container .card-b:hover:before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+
+
+
+/*texto de fondo grande del contenido gris*/
+.container .card-b:after
+{
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.04);
+}
+/*escalamos la imagen del botin*/
+img{
+    scale: 0.8;
+}
+/*seleccionamos el contenedor del botin imgBx*/
+.container .card-b .imgBx-b
+{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+/*El hover para que cuando se selecciona se mueva*/
+.container .card-b:hover .imgBx-b{
+    top: -10%;
+    transform: translate(0%);
+}
+/*seleccionamos especificamente el botin osea la img*/
+.container .card-b .imgBx-b img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    width: 270px;
+}
+/*Titulo Nike shoes, contenedor del texto*/
+.container .card-b .contentBx-b{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+/*hover del contenedor del titulo para que suba */
+.container .card-b:hover .contentBx-b{
+    height: 210px;
+}
+/*seleccionamos el texto del titulo especificamente*/
+.container .card-b .contentBx-b h2 {
+    position: relative;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+
+/*hacemos desparecer a size y color*/
+.container .card-b .contentBx-b .size-b
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card-b .contentBx-b .color-b
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+/*hover de size y color para que aparescas al tocar*/
+.container .card-b:hover .contentBx-b .size-b{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+
+.container .card-b:hover .contentBx-b .color-b{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card-b:hover .contentBx-b .color-b h3{
+    color: #fff;
+}
+
+/*texto de size*/
+
+.container .card-b .contentBx-b .size-b h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+/*los cuadrados que contiene un numero de calzado*/
+.container .card-b .contentBx-b .size-b span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*hover de los cuadrados*/
+.container .card-b .contentBx-b .size-b span:hover{
+    background: #9bdc28;
+
+}
+.container .card-b .contentBx-b .color-b span
+{
+    width: 25px;
+    height: 25px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-b .contentBx-b .color-b span:hover{
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+}
+
+.container .card-b .contentBx-b .color-b span:nth-child(2)
+{
+    background: #9bdc28;
+}
+
+.container .card-b .contentBx-b .color-b span:nth-child(3)
+{
+    background: #03a9f4;
+}
+
+.container .card-b .contentBx-b .color-b span:nth-child(4)
+{
+    background: #e91e63;
+}
+
+.container .card-b .contentBx-b a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container .card-b:hover .contentBx-b a{
+
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+}
+
+.container .card-b .contentBx-b a:hover{
+    scale: 1.2;
+    transition: 0.5s;
+    box-shadow: 0px 3px 10px 3px rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+/*C*/
+
+
+
+
+
+
+
+
+
+
+
+/*contenedor gris*/
+.container .card-c{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+/*dentro del contenedor gris, creamos un circulo*/
+.container .card-c:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+/* en hover le cambiamos el circulo*/
+.container .card-c:hover:before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+
+
+
+/*texto de fondo grande del contenido gris*/
+.container .card-c:after
+{
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.04);
+}
+/*escalamos la imagen del botin*/
+.card-c .imgBx-c img{
+    scale: 1;
+}
+/*seleccionamos el contenedor del botin imgBx*/
+.container .card-c .imgBx-c
+{
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+/*El hover para que cuando se selecciona se mueva*/
+.container .card-c:hover .imgBx-c{
+    top: -7%;
+    transform: translate(0%);
+}
+/*seleccionamos especificamente el botin osea la img*/
+.container .card-c .imgBx-c img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    width: 270px;
+}
+/*Titulo Nike shoes, contenedor del texto*/
+.container .card-c .contentBx-c{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+/*hover del contenedor del titulo para que suba */
+.container .card-c:hover .contentBx-c{
+    height: 210px;
+}
+/*seleccionamos el texto del titulo especificamente*/
+.container .card-c .contentBx-c h2 {
+    position: relative;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+
+/*hacemos desparecer a size y color*/
+.container .card-c .contentBx-c .size-c
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card-c .contentBx-c .color-c
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+/*hover de size y color para que aparescas al tocar*/
+.container .card-c:hover .contentBx-c .size-c{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+
+.container .card-c:hover .contentBx-c .color-c{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card-c:hover .contentBx-c .color-c h3{
+    color: #fff;
+}
+
+/*texto de size*/
+
+.container .card-c .contentBx-c .size-c h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+/*los cuadrados que contiene un numero de calzado*/
+.container .card-c .contentBx-c .size-c span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*hover de los cuadrados*/
+.container .card-c .contentBx-c .size-c span:hover{
+    background: #9bdc28;
+
+}
+.container .card-c .contentBx-c .color-c span
+{
+    width: 25px;
+    height: 25px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card-c .contentBx-c .color-c span:hover{
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+}
+
+.container .card-c .contentBx-c .color-c span:nth-child(2)
+{
+    background: #9bdc28;
+}
+
+.container .card-c .contentBx-c .color-c span:nth-child(3)
+{
+    background: #03a9f4;
+}
+
+.container .card-c .contentBx-c .color-c span:nth-child(4)
+{
+    background: #e91e63;
+}
+
+.container .card-c .contentBx-c a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container .card-c:hover .contentBx-c a{
+
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+}
+
+.container .card-c .contentBx-c a:hover{
+    scale: 1.2;
+    transition: 0.5s;
+    box-shadow: 0px 3px 10px 3px rgb(0, 0, 0);
+}
+
+
+/*FOOTER*/
+
+
+
+
+
+
+.footer{
+    display: flex;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.items-footer a{
+    text-decoration: none;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    color: rgb(189, 177, 72);
+}
+
+.copyright {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: rgb(187, 187, 187);
+}
+
+
+
+
+
+
+@media (max-width: 1000px){
+    .features{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .videos{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-bar ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

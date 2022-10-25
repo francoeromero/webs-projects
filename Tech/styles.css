@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    width: 100%;
+    background-color: rgb(163, 163, 163);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.title {
+    color: #fff;
+}
+
+a{
+    color: rgba(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*cuadrado chiquito*/
+#toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#toggle::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-5px); 
+    transition: 0.2s;
+}
+/*segunda linea blanca horizontal*/
+#toggle::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(5px); 
+    transition: 0.2s;
+}
+/* a las dos lineas lo giro a 45 grados para formar una X*/
+#toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+
+
+
+
+/*Contenedor del header vertical*/
+#navbar{
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0.8);
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 20%;
+    height: 100vh;
+    text-align: center;
+    position: fixed; 
+    left: -270px;
+    transition: 0.5s;
+    
+}
+/*javascript */
+#navbar.active {
+    left: 0px; /* para mostrarlo*/
+}
+
+
+#links a {
+    margin-right: 20px;
+    border: none;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    margin-top: 20px;
+   }
+
+#links a:hover {
+        background: #181818;
+   }
+
+
+
+/*el contenedor del main*/
+#content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+/* contenido principal */
+#main-doc{
+    border: 1px solid black;
+    background-color: rgb(211, 211, 211);
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%; /*80%*/
+    height: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/*Javascript*/
+/*
+#main-doc.active {
+    width: 80%;
+}
+*/
+
+/* personalizamos las cajas dentro de la barra lateral que contiene los anclajes*/
+.nav-link{
+    background-color: rgb(214, 214, 214);
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -18px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+/* las secciones del contenido principal*/
+.main-section{
+    margin: 20px;
+}
+
+@media (max-width: 1000px){
+    #toggle{
+        margin-top: 10000px;
+    }
+    /*la barra lateral se convierte en horizontal*/
+    #navbar {
+        
+        width: 100%;
+        height: 20%;
+        transition: 0.5s;
+        margin-left: 270px;
+        overflow: hidden;
+        
+    }
+    /*los enlaces*/
+    
+   #links {
+    display: flex;
+
+   }
+   a{
+    font-size: 0.7rem;
+    margin-bottom: 50px;
+   
+   }
+
+
+   
+   #links a:hover {
+        
+        font-size: 0.9rem;
+        
+        transition: 0.5s;
+       
+   }
+    
+  
+
+    #main-doc {
+        width: 100%;
+        transition: 0.5s;
+        margin-top: 150px;
+    }
+
+    section[id]{
+        scroll-margin-top: 120px;
+    }
+
+    
+}
