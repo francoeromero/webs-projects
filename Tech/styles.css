@@ -81,6 +81,8 @@ a{
     position: fixed; 
     left: -270px;
     transition: 0.5s;
+    font-size: 12px;
+    font-weight: 20;
     
 }
 /*javascript */
@@ -94,7 +96,7 @@ a{
     border: none;
     width: 100%;
     background: rgba(0,0,0,0.1);
-    margin-top: 20px;
+    margin-top: -25px;
    }
 
 #links a:hover {
