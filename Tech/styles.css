@@ -81,9 +81,9 @@ a{
     height: 100vh;
     text-align: center;
     position: fixed; 
-    left: -300px;
+    left: -340px;
     transition: 0.5s;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 20;
     
 }
@@ -126,6 +126,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+   
 }
 /*Javascript*/
 /*
